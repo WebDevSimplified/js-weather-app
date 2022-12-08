@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(200, 100%, 85%);
+  color: hsl(200, 100%, 10%);
+  font-family: sans-serif;
+}
+
+.blurred {
+  filter: blur(3px);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-right: 2px solid hsl(200, 100%, 10%);
+}
+
+.weather-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.weather-icon.large {
+  width: 80px;
+  height: 80px;
+}
+
+.header-current-temp {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.header-right {
+  display: grid;
+  width: 50%;
+  justify-content: space-around;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.6rem;
+  color: hsl(200, 100%, 20%);
+}
+
+.value-sub-info {
+  font-weight: lighter;
+  font-size: 0.75rem;
+}
+
+.day-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 75px);
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid hsl(200, 100%, 10%);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+.day-card-day {
+  font-size: 0.75rem;
+  color: hsl(200, 100%, 20%);
+  margin-top: 0.5rem;
+}
+
+.hour-section {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
+}
+
+.hour-row {
+  background-color: hsl(200, 60%, 75%);
+}
+
+.hour-row:nth-child(2n) {
+  background-color: hsl(200, 60%, 70%);
+}
+
+.hour-row > td {
+  padding: 0.25rem 0.5rem;
+}
